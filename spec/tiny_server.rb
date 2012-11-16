@@ -184,7 +184,7 @@ module TinyServer
 
     def call
       data = @data || @block.call
-      [@response_code, HEADERS, data]
+      [@response_code, HEADERS, Array(data)]
     end
 
     def to_s
